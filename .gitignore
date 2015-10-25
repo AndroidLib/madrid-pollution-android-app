@@ -1,0 +1,22 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+#Modules build folder
+/*/build/
+
+# Log Files
+*.log
+
+*.iml
+out/
+
+#Sonar
+.sonar
+
+#Jimu Mirror
+app/mirror
