@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Madrid Contaminación</string>
+
+    <string name="title_menu_madrid_city">MAPA DE MADRID CIUDAD</string>
+    <string name="title_menu_madrid_region">MAPA DE LA COMUNIDAD</string>
+    <string name="title_menu_pollutants">CONTAMINANTES</string>
+    <string name="title_menu_regulations">NORMATIVA</string>
+</resources>

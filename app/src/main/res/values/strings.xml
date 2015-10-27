@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Madrid Contaminación</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_menu_madrid_city">MADRID CITY MAP</string>
+    <string name="title_menu_madrid_region">MADRID REGION</string>
+    <string name="title_menu_pollutants">POLLUTANTS</string>
+    <string name="title_menu_regulations">REGULATIONS</string>
 </resources>

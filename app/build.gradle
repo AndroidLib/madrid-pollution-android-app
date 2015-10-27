@@ -35,10 +35,14 @@ dependencies {
     //Android
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.1.0'
 
 
     //ButterKnife
     compile 'com.jakewharton:butterknife:7.0.1'
+
+    //Ripple Effect
+    compile 'com.balysv:material-ripple:1.0.2'
 
     compile project(':presentation')
     compile project(':domain')
