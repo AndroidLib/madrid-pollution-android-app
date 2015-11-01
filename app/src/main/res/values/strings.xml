@@ -6,4 +6,40 @@
     <string name="title_menu_madrid_region">MADRID REGION</string>
     <string name="title_menu_pollutants">POLLUTANTS</string>
     <string name="title_menu_regulations">REGULATIONS</string>
+
+    <string name="pollutants_description">DESCRIPTIONS</string>
+    <string name="pollutants_effects">EFFECTS</string>
+
+    <string name="SO2" translatable="false">SO2</string>
+    <string name="CO" translatable="false">CO</string>
+    <string name="NO" translatable="false">NO</string>
+    <string name="NO2" translatable="false">NO2</string>
+    <string name="PM10" translatable="false">PM10</string>
+    <string name="O3" translatable="false">O3</string>
+    <string name="TOL" translatable="false">TOL</string>
+    <string name="BEN" translatable="false">BEN</string>
+    <string name="XIL" translatable="false">XIL</string>
+    <string name="HCT" translatable="false">HCT</string>
+    <string name="HNM" translatable="false">HNM</string>
+    <string name="PM25" translatable="false">PM2,5</string>
+    <string name="O3Q" translatable="false">O3Q</string>
+    <string name="guion">-</string>
+    <string name="ug">(µg)</string>
+    <string name="mg">(mg)</string>
+    <string name="PM10PM25" translatable="false">PM10 y PM2,5</string>
+
+    <!-- String menus -->
+
+    <string name="menu_refresh">Actualizar</string>
+    <string name="menu_mapsatellite">Cambiar tipo de Mapa</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_soluciona_pdf">Solucionar problemas con los PDF</string>
+
+    <!-- Strings MapaComunidad y MapaCiudad-->
+    <string name="info_mapacomunidad">Los datos son obtenidos de la Red de la Comunidad de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
+    <string name="info_mapaciudad">Los datos son obtenidos de la Red del Ayuntamiento de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_title_info">Información Importante:</string>
+
+    <string name="wikipedia">Textos extraidos de Wikipedia bajo licencia Creative Commons CC-BY-SA</string>
 </resources>

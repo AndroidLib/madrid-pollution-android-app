@@ -6,4 +6,6 @@
     <string name="title_menu_madrid_region">MAPA DE LA COMUNIDAD</string>
     <string name="title_menu_pollutants">CONTAMINANTES</string>
     <string name="title_menu_regulations">NORMATIVA</string>
+    <string name="pollutants_effects">EFECTOS</string>
+    <string name="pollutants_description">DESCRIPCIÓN</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:text="@string/pollutants_description"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/mp_grey_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_description_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt orci eget arcu varius sagittis. Fusce orci nisi, fringilla et dui ut, vulputate lobortis orci. In fermentum ligula vitae leo rutrum tempor. Quisque felis turpis, malesuada sit amet egestas non, pellentesque sed purus."
+        android:textColor="@color/mp_grey_dark"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@string/pollutants_effects"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/mp_grey_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_effects_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt orci eget arcu varius sagittis. Fusce orci nisi, fringilla et dui ut, vulputate lobortis orci. In fermentum ligula vitae leo rutrum tempor. Quisque felis turpis, malesuada sit amet egestas non, pellentesque sed purus."
+        android:textColor="@color/mp_grey_dark"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
