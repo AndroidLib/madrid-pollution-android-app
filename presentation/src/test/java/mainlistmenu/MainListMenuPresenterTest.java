@@ -19,6 +19,8 @@ public class MainListMenuPresenterTest {
 
         mockMainListMenuView = mock(IMainListMenuView.class);
 
+        presenter = new MainListMenuPresenter(mockMainListMenuView);
+
     }
 
     @Test
