@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -61,7 +62,9 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
 
         setSupportActionBar(mToolbar);
 
-        getSupportActionBar().setTitle(R.string.regulations_title);
+        getSupportActionBar().setTitle(R.string.title_menu_regulations);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mPresenter = new RegulationsPresenter(this);
 
@@ -107,12 +110,29 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
         }
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return false;
+    }
+
 
     @Override
     protected void onResume() {
         super.onResume();
 
         mPresenter.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (isFinishing()) {
+            overridePendingTransition(R.anim.activity_stay, R.anim.slide_out_right);
+        }
     }
 
     @Override

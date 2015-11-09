@@ -18,7 +18,7 @@ public class MainListMenuPresenter {
     }
 
     public void onRegulationsPressed(){
-
+        mView.proceedToRegulationsView();
     }
 
     public void onPollutantsPressed(){

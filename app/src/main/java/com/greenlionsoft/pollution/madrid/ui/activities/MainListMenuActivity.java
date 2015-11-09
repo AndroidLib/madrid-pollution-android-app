@@ -45,8 +45,16 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
     }
 
     @Override
+    public void proceedToRegulationsView() {
+        Intent intent = new Intent(this, RegulationsActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.activity_stay);
+    }
+
+    @Override
     public void proceedToPollutantsView() {
         Intent intent = new Intent(this, PollutantsActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.activity_stay);
     }
 }
