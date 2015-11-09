@@ -42,4 +42,22 @@
     <string name="dialog_title_info">Información Importante:</string>
 
     <string name="wikipedia">Textos extraidos de Wikipedia bajo licencia Creative Commons CC-BY-SA</string>
+
+    <!-- -->
+
+    <string name="regulations_text">Los umbrales que son considerados límite en ésta aplicación corresponden a los definidos en la Directiva europea 2008/50/CE y su correspondiente transposición en el Real Decreto 102/2011. A modo de resumen rápido y orientativo
+	    quedan reflejados en la siguiente tabla pero para una consulta exhaustiva y rigurosa puede descargar y visualizar los textos de ambas normativas en PDF.</string>
+    <string name="red_code_text">Valor igual o superior al límite</string>
+    <string name="yellow_code_text">Valor superior a la mitad del límite</string>
+    <string name="green_code_text">Valor menor de la mitad del límite</string>
+    <string name="colors_code">Código de Colores:</string>
+    <string name="browse_directive">Ver la directiva 2008/50/CE</string>
+    <string name="download_directive">Descargar la directiva 2008/50/CE</string>
+    <string name="browse_boe">Ver el Real Decreto 102/2011</string>
+    <string name="download_boe">Descargar el Real Decreto 102/2011</string>
+    <string name="units_by_m3">Unidades/m3</string>
+    <string name="limits">Límites</string>
+    <string name="Pollutants">Contaminantes</string>
+    <string name="regulations_title">Normativa</string>
+    <string name="snackbar_no_pdf_viewer_available">No hay un visor de PDF disponible en este dispositivo</string>
 </resources>
