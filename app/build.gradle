@@ -46,6 +46,7 @@ dependencies {
 
     compile project(':presentation')
     compile project(':domain')
+    compile project(':repository')
 }
 
 
