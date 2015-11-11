@@ -36,4 +36,57 @@
         <item>Sus vapores pueden provocar dolor de cabeza, náuseas y malestar general. Al igual que el benceno, es un agente narcótico. Las exposiciones prolongadas a este producto puede ocasionar alteraciones en el sistema nervioso central.</item>
     </string-array>
 
+    <string-array name="array_zone_1">
+        <item>Plaza de España</item>
+        <item>Escuela Aguirre</item>
+        <item>Avenida Ramón y Cajal</item>
+        <item>Arturo Soria</item>
+        <item>Villaverde</item>
+        <item>Farolillo</item>
+        <item>Casa de Campo</item>
+        <item>Barajas Pueblo</item>
+        <item>Plaza del Carmen</item>
+        <item>Moratalaz</item>
+        <item>Cuatro Caminos</item>
+        <item>Barrio del Pilar</item>
+        <item>Puente de Vallecas</item>
+        <item>Méndez Álvaro</item>
+        <item>Castellana</item>
+        <item>Parque del Retiro</item>
+        <item>Plaza de Castilla</item>
+        <item>Ensanche de Vallecas</item>
+        <item>Urbanización Embajada</item>
+        <item>Plaza de Fernández Ladreda</item>
+        <item>San Chinarro</item>
+        <item>El Pardo</item>
+        <item>Juan Carlos I</item>
+        <item>Tres Olivos</item>
+    </string-array>
+
+    <string-array name="array_LatLng_zone_1">
+        <item>40.42361111,-3.712222222</item>
+        <item>40.42138889,-3.682222222</item>
+        <item>40.45138889,-3.677222222</item>
+        <item>40.44000000,-3.639166667</item>
+        <item>40.34694444,-3.713055556</item>
+        <item>40.39472222,-3.731666667</item>
+        <item>40.41916667,-3.747222222</item>
+        <item>40.47666667,-3.580000000</item>
+        <item>40.41916667,-3.703055556</item>
+        <item>40.40777778,-3.645277778</item>
+        <item>40.44527778,-3.706944444</item>
+        <item>40.47805556,-3.711388889</item>
+        <item>40.38805556,-3.651388889</item>
+        <item>40.39805556,-3.686666667</item>
+        <item>40.43972222,-3.690277778</item>
+        <item>40.41444444,-3.682500000</item>
+        <item>40.46555556,-3.688611111</item>
+        <item>40.37277778,-3.611944444</item>
+        <item>40.46250000,-3.580555556</item>
+        <item>40.38472222,-3.718611111</item>
+        <item>40.49416667,-3.660277778</item>
+        <item>40.51805556,-3.774444444</item>
+        <item>40.46500000,-3.608888889</item>
+        <item>40.50055556,-3.689722222</item>
+    </string-array>
 </resources>
