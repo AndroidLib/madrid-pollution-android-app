@@ -3,7 +3,10 @@ package com.greenlionsoft.pollution.madrid.dependencies;
 import android.content.Context;
 
 import dependencies.IAppInjector;
-import pdf.IPdfRepository;
+import repository.IPdfRepository;
+import repository.IPollutantsRepository;
+import repository.IStationsRepository;
+import repository.IUserPreferencesRepository;
 
 public class AppInjector implements IAppInjector {
 
@@ -42,4 +45,21 @@ public class AppInjector implements IAppInjector {
     public IPdfRepository getPdfRepository() {
         return new PdfRepository();
     }
+
+    @Override
+    public IStationsRepository getStationsRepository() {
+        return new StationsRepository();
+    }
+
+    @Override
+    public IPollutantsRepository getPollutantsRepository() {
+        return new PollutantsRepository();
+    }
+
+    @Override
+    public IUserPreferencesRepository getUserPreferencesRepository() {
+        return new UserPreferencesRepository();
+    }
+
+
 }
