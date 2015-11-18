@@ -6,7 +6,8 @@
         <item>NO</item>
         <item>NO2</item>
         <item>O3</item>
-        <item>PM10 - PM2,5</item>
+        <item>PM2,5</item>
+        <item>PM10</item>
         <item>TOL</item>
         <item>BEN</item>
         <item>XIL</item>
@@ -19,6 +20,7 @@
         <item>El dióxido de nitrógeno NO2, es uno de los principales contaminantes entre los varios óxidos de nitrógeno. El dióxido de nitrógeno es de color marrón-amarillento. Se forma como subproducto en los procesos de combustión a altas temperaturas, como en los vehículos motorizados y las plantas eléctricas.</item>
         <item>El ozono troposférico O3 es un gas incoloro que se crea a través de reacciones fotoquímicas entre óxidos de nitrógeno (NOx) y compuestos orgánicos volátiles (COV) derivados de fuentes como la quema de combustible. Es el compuesto más destacado de los oxidantes fotoquímicos y forma parte del smog.</item>
         <item>Se denomina PM10 y PM2,5 a pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro es menor que 10 µm o 2,5 µm respectivamente. Están formadas principalmente por compuestos inorgánicos como silicatos y aluminatos, metales pesados entre otros, y material orgánico asociado a partículas de carbono.</item>
+        <item>Se denomina PM10 y PM2,5 a pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro es menor que 10 µm o 2,5 µm respectivamente. Están formadas principalmente por compuestos inorgánicos como silicatos y aluminatos, metales pesados entre otros, y material orgánico asociado a partículas de carbono.</item>
         <item>El tolueno C6H5CH3 es un hidrocarburo que se adiciona a los combustibles como antidetonante y como disolvente para pinturas, revestimientos, caucho, resinas, diluyente en lacas nitrocelulósicas y en adhesivos.</item>
         <item>El benceno C6H6 es un líquido incoloro y muy inflamable de aroma dulce de carácter cancerígeno. Es uno de los productos químicos de mayor volumen de producción. El benceno se usa como punto de partida para manufacturar otros productos químicos usados en la fabricación de plásticos, resinas, nilón y fibras sintéticas como lo es el kevlar y en ciertos polímeros. También se usa benceno para hacer ciertos tipos de gomas, lubricantes, tinturas, detergentes, medicamentos y pesticidas.</item>
         <item>El Xileno C6H4 es un líquido incoloro e inflamable usado en la combustión de motores de gasolina y también como disolvente industrial.</item>
@@ -30,6 +32,7 @@
         <item>Este gas en el aire puede convertirse en ácido nítrico produciendo así lluvia ácida. Es causante del Smog fotoquímico que cubre las ciudades contaminadas además de afectar negativamente a la capa de ozono.</item>
         <item>Es un gas tóxico, irritante y precursor de la formación de partículas de nitrato. Estas llevan a la producción de ácido y elevados niveles de PM2,5 en el ambiente. Afecta principalmente al sistema respiratorio. La exposición a corto plazo en altos niveles causa daños en las células pulmonares, mientras que la exposición a más largo plazo en niveles bajos de dióxido de nitrógeno puede causar cambios irreversibles en el tejido pulmonar similares a un enfisema.</item>
         <item>Su principal característica es que es un fortísimo oxidante con repercusiones importantes en la salud humana. Los primeros síntomas son: tos, dolor de cabeza, náuseas, dolores pectorales, y sensación de asfixia. Concentraciones muy elevadas pueden ocasionar daños en las funciones pulmonares</item>
+        <item>Al ser inhaladas y penetrar con facilidad al sistema respiratorio humano, causan efectos adversos a la salud de las personas estando detrás de numerosas enfermedades respiratorias, problemas cardiovasculares, y cáncer de pulmón. A largo plazo se ha estimado que la exposición a partículas en suspensión puede reducir la esperanza de vida entre varios meses y dos años.</item>
         <item>Al ser inhaladas y penetrar con facilidad al sistema respiratorio humano, causan efectos adversos a la salud de las personas estando detrás de numerosas enfermedades respiratorias, problemas cardiovasculares, y cáncer de pulmón. A largo plazo se ha estimado que la exposición a partículas en suspensión puede reducir la esperanza de vida entre varios meses y dos años.</item>
         <item>Puede afectar al sistema nervioso, niveles bajos o moderados pueden producir cansancio, confusión, debilidad, pérdida de la memoria, náusea, pérdida del apetito, pérdida de la audición y la vista. Puede causar, además, pérdida del conocimiento y, en casos extremos, la muerte. Estos síntomas generalmente desaparecen cuando la exposición termina.</item>
         <item>Respirar niveles de benceno muy altos puede causar la muerte, mientras que niveles bajos pueden causar somnolencia, mareo y aceleración del latido del corazón o taquicardia. Comer o tomar altos niveles de benceno puede causar vómitos, irritación del estómago, mareo, somnolencia o convulsiones, y en último extremo la muerte.</item>
@@ -61,6 +64,35 @@
         <item>El Pardo</item>
         <item>Juan Carlos I</item>
         <item>Tres Olivos</item>
+        <item>Media Red</item>
+    </string-array>
+
+    <string-array name="array_zone_1_json_names">
+        <item>PLAZA ESPAÑA</item>
+        <item>ESCUELAS AGUIRRE</item>
+        <item>AVDA. RAMON Y CAJAL</item>
+        <item>ARTURO SORIA</item>
+        <item>VILLAVERDE</item>
+        <item>FAROLILLO</item>
+        <item>CASA DE CAMPO</item>
+        <item>BARAJAS PUEBLO</item>
+        <item>PLAZA DEL CARMEN</item>
+        <item>MORATALAZ</item>
+        <item>CUATRO CAMINOS</item>
+        <item>BARRIO DEL PILAR</item>
+        <item>PUENTE DE VALLECAS</item>
+        <item>MENDEZ ALVARO</item>
+        <item>CASTELLANA</item>
+        <item>RETIRO</item>
+        <item>PLAZA DE CASTILLA</item>
+        <item>ENSANCHE DE VALLECAS</item>
+        <item>URBANIZACION EMBAJADA</item>
+        <item>FERNANDEZ LADREDA</item>
+        <item>SANCHINARRO</item>
+        <item>EL PARDO</item>
+        <item>JUAN CARLOS I</item>
+        <item>TRES OLIVOS</item>
+        <item>MEDIA RED</item>
     </string-array>
 
     <string-array name="array_LatLng_zone_1">
@@ -88,5 +120,6 @@
         <item>40.51805556,-3.774444444</item>
         <item>40.46500000,-3.608888889</item>
         <item>40.50055556,-3.689722222</item>
+        <item>40.41694400,-3.703611000</item>
     </string-array>
 </resources>
