@@ -21,3 +21,7 @@ out/
 
 #Jimu Mirror
 app/mirror
+
+#app secrets
+app-secret.properties
+app/fabric.properties
