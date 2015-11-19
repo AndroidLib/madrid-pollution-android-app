@@ -10,7 +10,7 @@ public class MainListMenuPresenter {
     }
 
     public void onMadridCityMapPressed(){
-
+        mView.proceedToMapCityView();
     }
 
     public void onMadridRegionMapPressed(){
