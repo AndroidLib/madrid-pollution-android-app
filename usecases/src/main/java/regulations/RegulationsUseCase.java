@@ -2,7 +2,7 @@ package regulations;
 
 import java.io.File;
 
-import pdf.IPdfRepository;
+import repository.IPdfRepository;
 
 public class RegulationsUseCase {
 

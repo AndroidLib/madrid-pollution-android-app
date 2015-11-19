@@ -60,4 +60,7 @@
     <string name="Pollutants">Contaminantes</string>
     <string name="regulations_title">Normativa</string>
     <string name="snackbar_no_pdf_viewer_available">No hay un visor de PDF disponible en este dispositivo</string>
+    <string name="last_hour_mean">Última media. horaria:</string>
+    <string name="error_unknown_message">No ha sido posible obtener datos</string>
+    <string name="error_network_message">No hay conexión a Internet disponible</string>
 </resources>

@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.greenlionsoft.pollution.madrid.R;
 import com.greenlionsoft.pollution.madrid.dependencies.retrofit.PollutionWebService;
-import com.greenlionsoft.pollution.madrid.tools.JsonFromRawUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,11 +58,6 @@ public class StationsRepository implements IStationsRepository {
 
 
     @Override
-    public List<RawLatLng> getRawLocationsOfMadridCityStations() {
-        return mRawLatLngs;
-    }
-
-    @Override
     public List<PollutionStation> getEmptyMadridCityPollutionStations() {
 
         List<PollutionStation> pollutionStations = new ArrayList<>();
@@ -82,17 +76,7 @@ public class StationsRepository implements IStationsRepository {
         return pollutionStations;
     }
 
-    @Override
-    public List<PollutionStation> getPlainPollutionStations() {
 
-        PollutionData data = JsonFromRawUtil.resourceId(R.raw.example, mContext);
-
-        List<PollutionStation> pollutionStations = data.stations;
-
-        fillLocationData(pollutionStations);
-
-        return pollutionStations;
-    }
 
     private void fillLocationData(List<PollutionStation> pollutionStations) {
 
