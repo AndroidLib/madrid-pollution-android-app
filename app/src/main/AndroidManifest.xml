@@ -47,6 +47,17 @@
 
         <activity android:name=".ui.activities.PollutantsActivity"/>
 
+        <!-- Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+           installation campaign reporting -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_v2_api_key"/>

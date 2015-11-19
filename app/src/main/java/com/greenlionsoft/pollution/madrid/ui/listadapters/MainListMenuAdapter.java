@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.greenlionsoft.pollution.madrid.R;
+import com.greenlionsoft.pollution.madrid.tools.AnalyticsUtil;
 
 import mainlistmenu.MainListMenuPresenter;
 
@@ -109,15 +110,18 @@ public class MainListMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         switch (position){
 
             case 0:
+                AnalyticsUtil.countVisit(mContext, AnalyticsUtil.MADRID_CITY_MAP_SCREEN);
                 mPresenter.onMadridCityMapPressed();
                 break;
 //            case 1:
 //                mPresenter.onMadridRegionMapPressed();
 //                break;
             case 1:
+                AnalyticsUtil.countVisit(mContext, AnalyticsUtil.REGULATIONS_SCREEN);
                 mPresenter.onRegulationsPressed();
                 break;
             case 2:
+                AnalyticsUtil.countVisit(mContext, AnalyticsUtil.POLLUTANTS_SCREEN);
                 mPresenter.onPollutantsPressed();
                 break;
         }

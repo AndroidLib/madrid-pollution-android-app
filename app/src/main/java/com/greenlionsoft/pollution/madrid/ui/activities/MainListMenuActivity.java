@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.greenlionsoft.pollution.madrid.R;
+import com.greenlionsoft.pollution.madrid.tools.AnalyticsUtil;
 import com.greenlionsoft.pollution.madrid.ui.listadapters.MainListMenuAdapter;
 
 import butterknife.Bind;
@@ -45,6 +46,8 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
         MainListMenuAdapter adapter = new MainListMenuAdapter(mPresenter, this);
         mListMenuRv.setAdapter(adapter);
 
+
+        AnalyticsUtil.countVisit(this, AnalyticsUtil.MAIN_SCREEN);
     }
 
     @Override
