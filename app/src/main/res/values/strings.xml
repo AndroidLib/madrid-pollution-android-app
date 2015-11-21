@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Madrid Contaminación</string>
+    <string name="app_name">Madrid Pollution</string>
     <string name="action_settings">Settings</string>
 
     <string name="title_menu_madrid_city">MADRID CITY MAP</string>
@@ -23,23 +23,21 @@
     <string name="HNM" translatable="false">HNM</string>
     <string name="PM25" translatable="false">PM2,5</string>
     <string name="O3Q" translatable="false">O3Q</string>
-    <string name="guion">-</string>
-    <string name="ug">(µg)</string>
-    <string name="mg">(mg)</string>
+    <string name="guion" translatable="false">-</string>
+    <string name="ug" translatable="false">(µg)</string>
+    <string name="mg" translatable="false">(mg)</string>
     <string name="PM10PM25" translatable="false">PM10 y PM2,5</string>
 
     <!-- String menus -->
 
-    <string name="menu_refresh">Actualizar</string>
-    <string name="menu_mapsatellite">Cambiar tipo de Mapa</string>
+    <string name="menu_refresh">Refresh</string>
     <string name="menu_info">Info</string>
-    <string name="menu_soluciona_pdf">Solucionar problemas con los PDF</string>
+    <string name="menu_soluciona_pdf" translatable="false">Solucionar problemas con los PDF</string>
 
     <!-- Strings MapaComunidad y MapaCiudad-->
     <string name="info_mapacomunidad">Los datos son obtenidos de la Red de la Comunidad de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
     <string name="info_mapaciudad">Los datos son obtenidos de la Red del Ayuntamiento de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
     <string name="dialog_ok">Ok</string>
-    <string name="dialog_title_info">Información Importante:</string>
 
     <string name="wikipedia">Textos extraidos de Wikipedia bajo licencia Creative Commons CC-BY-SA</string>
 
@@ -47,20 +45,22 @@
 
     <string name="regulations_text">Los umbrales que son considerados límite en ésta aplicación corresponden a los definidos en la Directiva europea 2008/50/CE y su correspondiente transposición en el Real Decreto 102/2011. A modo de resumen rápido y orientativo
 	    quedan reflejados en la siguiente tabla pero para una consulta exhaustiva y rigurosa puede descargar y visualizar los textos de ambas normativas en PDF.</string>
-    <string name="red_code_text">Valor igual o superior al límite</string>
-    <string name="yellow_code_text">Valor superior a la mitad del límite</string>
-    <string name="green_code_text">Valor menor de la mitad del límite</string>
-    <string name="colors_code">Código de Colores:</string>
+    <string name="red_code_text">Value equal or larger than limit</string>
+    <string name="yellow_code_text">Value larger than half the limit</string>
     <string name="browse_directive">Ver la directiva 2008/50/CE</string>
-    <string name="download_directive">Descargar la directiva 2008/50/CE</string>
     <string name="browse_boe">Ver el Real Decreto 102/2011</string>
-    <string name="download_boe">Descargar el Real Decreto 102/2011</string>
-    <string name="units_by_m3">Unidades/m3</string>
-    <string name="limits">Límites</string>
-    <string name="Pollutants">Contaminantes</string>
-    <string name="regulations_title">Normativa</string>
-    <string name="snackbar_no_pdf_viewer_available">No hay un visor de PDF disponible en este dispositivo</string>
-    <string name="last_hour_mean">Última media. horaria:</string>
-    <string name="error_unknown_message">No ha sido posible obtener datos</string>
-    <string name="error_network_message">No hay conexión a Internet disponible</string>
+    <string name="limits">Limits</string>
+    <string name="Pollutants">Pollutants</string>
+    <string name="regulations_title">Regulation</string>
+    <string name="snackbar_no_pdf_viewer_available">There is no PDF viewer available in this device</string>
+    <string name="error_network_message">No Internet Connection Available</string>
+    <string name="colors_code">Color Codes:</string>
+    <string name="dialog_title_info">Important Information</string>
+    <string name="download_boe">Download Real Decreto 102/2011</string>
+    <string name="download_directive">Dowload Directive 2008/50/CE</string>
+    <string name="error_unknown_message">Failed to obtain data</string>
+    <string name="green_code_text">Value less than half of the limit</string>
+    <string name="last_hour_mean">Last hourly mean</string>
+    <string name="menu_mapsatellite">Change Map Tipe</string>
+    <string name="units_by_m3">Units/m3</string>
 </resources>
