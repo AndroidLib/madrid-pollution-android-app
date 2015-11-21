@@ -6,8 +6,7 @@ machine:
 
 dependencies:
   pre:
-    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,android-23
-    - echo y | android update sdk --no-ui --all --filter build-tools-23.0.2
+    - echo y | android update sdk --no-ui --all --filter extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,android-23, build-tools-23.0.1
 test:
   override:
       - ./gradlew test -PpreDexEnable=false --stacktrace
