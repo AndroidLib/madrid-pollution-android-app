@@ -16,7 +16,14 @@ repositories {
 
 //https://www.thoughtworks.com/insights/blog/signing-open-source-android-apps-without-disclosing-passwords
 def appSecrets = new Properties()
-appSecrets.load(new FileInputStream(rootProject.file("app-secret.properties")))
+try {
+    //Create your own app-secrets.properties file using app-secret.propertiesTEMPLATE"
+    appSecrets.load(new FileInputStream(rootProject.file("app-secret.properties")))
+} catch (Exception e) {
+    //This is needed to avoid Build fail in public CI server without secrets file, eg. Circle CI, Travis CI
+    appSecrets.load(new FileInputStream(rootProject.file("app-secret.propertiesTEMPLATE")))
+}
+
 
 android {
     compileSdkVersion 23
