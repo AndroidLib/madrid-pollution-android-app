@@ -100,8 +100,8 @@ public class StationsRepository implements IStationsRepository {
         }
 
         RestAdapter restAdapter = new RestAdapter.Builder()
-                .setEndpoint("https://gls-pollution-api.herokuapp.com")
-                .setLogLevel(RestAdapter.LogLevel.FULL)
+                .setEndpoint(mContext.getResources().getString(R.string.pollution_end_point))
+                .setLogLevel(RestAdapter.LogLevel.NONE)
                 .build();
 
         PollutionWebService pollutionWebService = restAdapter.create(PollutionWebService.class);
