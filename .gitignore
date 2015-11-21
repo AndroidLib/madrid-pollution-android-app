@@ -25,3 +25,4 @@ app/mirror
 #app secrets
 app-secret.properties
 app/fabric.properties
+
