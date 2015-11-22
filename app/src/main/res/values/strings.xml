@@ -1,15 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Madrid Pollution</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Activity Titles -->
     <string name="title_menu_madrid_city">MADRID CITY MAP</string>
     <string name="title_menu_madrid_region">MADRID REGION</string>
     <string name="title_menu_pollutants">POLLUTANTS</string>
     <string name="title_menu_regulations">REGULATIONS</string>
 
+    <!-- Madrid Map Activity -->
+    <string name="error_network_message">No Internet Connection Available</string>
+    <string name="error_unknown_message">Failed to obtain data</string>
+    <string name="last_hour_mean">Last hourly mean</string>
+    <string name="permission_location_explanation">If you want to see your own location in map it is necessary to grant app location permissions.</string>
+
+    <!-- Regulations Activity -->
+    <string name="download_boe">Download Real Decreto 102/2011</string>
+    <string name="download_directive">Dowload Directive 2008/50/CE</string>
+    <string name="browse_boe">Browse Royal Decret 102/2011</string>
+    <string name="browse_directive">Browse Directive 2008/50/CE</string>
+
+    <string name="regulations_text">The thresholds that are considered a limit in this application correspond to those defined in the European Directive 2008/50/EC and its corresponding implementation in Royal Decree 102/2011. As a quick summary and guidance. They are reflected in the following table but for a thorough and rigorous inquiry you can download and view the texts of both standards in PDF.</string>
+
+    <string name="pollutants">Pollutants</string>
+    <string name="limits">Limits</string>
+    <string name="units_by_m3">Units/m3</string>
+
+    <string name="colors_code">Color Codes:</string>
+    <string name="green_code_text">Value less than half of the limit</string>
+    <string name="yellow_code_text">Value larger than half the limit</string>
+    <string name="red_code_text">Value equal or larger than limit</string>
+
+    <string name="snackbar_no_pdf_viewer_available">There is no PDF viewer available in this device</string>
+
+    <!-- Pollutants Activity -->
     <string name="pollutants_description">DESCRIPTIONS</string>
     <string name="pollutants_effects">EFFECTS</string>
 
+    <!-- Future reference -->
+    <string name="wikipedia">Texts from Wikipedia under Creative Commons License CC-BY-SA</string>
+
+    <!-- Non Translatable Strings -->
     <string name="SO2" translatable="false">SO2</string>
     <string name="CO" translatable="false">CO</string>
     <string name="NO" translatable="false">NO</string>
@@ -23,44 +55,8 @@
     <string name="HNM" translatable="false">HNM</string>
     <string name="PM25" translatable="false">PM2,5</string>
     <string name="O3Q" translatable="false">O3Q</string>
-    <string name="guion" translatable="false">-</string>
     <string name="ug" translatable="false">(µg)</string>
     <string name="mg" translatable="false">(mg)</string>
     <string name="PM10PM25" translatable="false">PM10 y PM2,5</string>
 
-    <!-- String menus -->
-
-    <string name="menu_refresh">Refresh</string>
-    <string name="menu_info">Info</string>
-    <string name="menu_soluciona_pdf" translatable="false">Solucionar problemas con los PDF</string>
-
-    <!-- Strings MapaComunidad y MapaCiudad-->
-    <string name="info_mapacomunidad">Los datos son obtenidos de la Red de la Comunidad de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
-    <string name="info_mapaciudad">Los datos son obtenidos de la Red del Ayuntamiento de Madrid y corresponden extrictamente a la última media horaria pendiente de validación disponible.\n\nGreenlionsoft no se hace responsable de la precisión o veracidad de los mismos.\n\nPara más información sobre los umbrales y colores consulta la sección \"Normativa\".\n\nPara conecer más sobre cada uno de los contaminantes y sus efectos consulta la sección \"Contaminantes\".</string>
-    <string name="dialog_ok">Ok</string>
-
-    <string name="wikipedia">Textos extraidos de Wikipedia bajo licencia Creative Commons CC-BY-SA</string>
-
-    <!-- -->
-
-    <string name="regulations_text">Los umbrales que son considerados límite en ésta aplicación corresponden a los definidos en la Directiva europea 2008/50/CE y su correspondiente transposición en el Real Decreto 102/2011. A modo de resumen rápido y orientativo
-	    quedan reflejados en la siguiente tabla pero para una consulta exhaustiva y rigurosa puede descargar y visualizar los textos de ambas normativas en PDF.</string>
-    <string name="red_code_text">Value equal or larger than limit</string>
-    <string name="yellow_code_text">Value larger than half the limit</string>
-    <string name="browse_directive">Ver la directiva 2008/50/CE</string>
-    <string name="browse_boe">Ver el Real Decreto 102/2011</string>
-    <string name="limits">Limits</string>
-    <string name="Pollutants">Pollutants</string>
-    <string name="regulations_title">Regulation</string>
-    <string name="snackbar_no_pdf_viewer_available">There is no PDF viewer available in this device</string>
-    <string name="error_network_message">No Internet Connection Available</string>
-    <string name="colors_code">Color Codes:</string>
-    <string name="dialog_title_info">Important Information</string>
-    <string name="download_boe">Download Real Decreto 102/2011</string>
-    <string name="download_directive">Dowload Directive 2008/50/CE</string>
-    <string name="error_unknown_message">Failed to obtain data</string>
-    <string name="green_code_text">Value less than half of the limit</string>
-    <string name="last_hour_mean">Last hourly mean</string>
-    <string name="menu_mapsatellite">Change Map Tipe</string>
-    <string name="units_by_m3">Units/m3</string>
 </resources>
