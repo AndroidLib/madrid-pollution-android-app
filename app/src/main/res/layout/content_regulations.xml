@@ -119,7 +119,7 @@
             android:layout_height="36dp">
 
             <TextView
-                android:text="@string/Pollutants"
+                android:text="@string/pollutants"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:layout_width="0dp"

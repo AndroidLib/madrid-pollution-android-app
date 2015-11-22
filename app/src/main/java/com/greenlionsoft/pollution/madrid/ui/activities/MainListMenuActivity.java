@@ -32,7 +32,7 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_list_menu_activity);
+        setContentView(R.layout.activity_main_list_menu);
 
         ButterKnife.bind(this);
 
