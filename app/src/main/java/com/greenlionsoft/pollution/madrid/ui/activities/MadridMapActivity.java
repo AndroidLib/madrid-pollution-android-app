@@ -1,13 +1,18 @@
 package com.greenlionsoft.pollution.madrid.ui.activities;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,12 +47,12 @@ import entities.ColorRules;
 import entities.Pollutant;
 import entities.PollutantInfo;
 import entities.PollutionStation;
-import entities.RawLatLng;
 import madridmap.IMadridMapView;
 import madridmap.MadridMapPresenter;
 
 public class MadridMapActivity extends BaseActivity implements OnMapReadyCallback, IMadridMapView {
 
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 111;
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
@@ -159,6 +164,7 @@ public class MadridMapActivity extends BaseActivity implements OnMapReadyCallbac
         if (savedInstanceState == null) {
             mMapFragment.getMapAsync(this);
         }
+
     }
 
     private void initLayout() {
@@ -226,23 +232,6 @@ public class MadridMapActivity extends BaseActivity implements OnMapReadyCallbac
     @Override
     public IAppInjector getAppInjector() {
         return AppInjector.getInstance();
-    }
-
-    @Override
-    public void drawStations(List<RawLatLng> locations) {
-
-        //ZoomUtil.adjustZoomToShowAllLocations(mGoogleMap, locations);
-
-
-        for (RawLatLng rawLatLng : locations) {
-
-            mGoogleMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(rawLatLng.getLat(), rawLatLng.getLon()))
-                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_marker_grey)))
-                    .setAnchor(0.5f, 0.5f);
-        }
-
-
     }
 
     @Override
@@ -447,6 +436,38 @@ public class MadridMapActivity extends BaseActivity implements OnMapReadyCallbac
 
     }
 
+    @Override
+    public void showUserLocation() {
+
+        mGoogleMap.setMyLocationEnabled(true);
+    }
+
+    @Override
+    public void requestLocationPermissionToUserIfNecessary() {
+
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+            showMessageOKCancel(getString(R.string.permission_location_explanation), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    ActivityCompat.requestPermissions(MadridMapActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+                }
+            });
+
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        new AlertDialog.Builder(MadridMapActivity.this)
+                .setMessage(message)
+                .setPositiveButton("OK", okListener)
+                .setNegativeButton("Cancel", null)
+                .create()
+                .show();
+    }
+
     private void setMarkerAsSelected(Marker marker, boolean centerMap) {
 
 
@@ -543,6 +564,19 @@ public class MadridMapActivity extends BaseActivity implements OnMapReadyCallbac
 
             marker.setIcon(BitmapDescriptorFactory.fromResource(resourceId));
         }
+    }
 
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
+
+            if (permissions[0] == Manifest.permission.ACCESS_FINE_LOCATION
+                    && grantResults.length > 0
+                    && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                mPresenter.onUserLocationPermissionGranted();
+            }
+        }
     }
 }

@@ -18,7 +18,8 @@ public class MadridMapPresenter implements IMadridMapUseCaseDelegate {
         this.mMadridMapUseCase = new MadridMapUseCase(this,
                 view.getAppInjector().getStationsRepository(),
                 view.getAppInjector().getUserPreferencesRepository(),
-                view.getAppInjector().getPollutantsRepository());
+                view.getAppInjector().getPollutantsRepository(),
+                view.getAppInjector().getPermissionsRepository());
     }
 
 
@@ -27,6 +28,12 @@ public class MadridMapPresenter implements IMadridMapUseCaseDelegate {
         mView.populateMapWithPollutionData(mMadridMapUseCase.getEmptyMadridCityPollutionStations(), mMadridMapUseCase.getSelectedStationName());
         mView.populatePollutionDataDate("---- -- --", "--:--");
         mMadridMapUseCase.getNewPollutionDataFromServer();
+
+        if (mMadridMapUseCase.hasAppPermissionToShowUserLocation()) {
+            mView.showUserLocation();
+        } else {
+            mView.requestLocationPermissionToUserIfNecessary();
+        }
     }
 
     public void onContentActionPressed() {
@@ -70,6 +77,9 @@ public class MadridMapPresenter implements IMadridMapUseCaseDelegate {
         mMadridMapUseCase.saveSelectedStationName(name);
     }
 
+    public void onUserLocationPermissionGranted() {
+        mView.showUserLocation();
+    }
 
     @Override
     public void onPollutionDataAvailable(PollutionData pollutionData, String selectedStationName) {

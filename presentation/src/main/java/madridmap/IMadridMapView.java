@@ -5,11 +5,8 @@ import java.util.List;
 import baseview.IBaseView;
 import entities.PollutantInfo;
 import entities.PollutionStation;
-import entities.RawLatLng;
 
 public interface IMadridMapView extends IBaseView {
-
-    void drawStations(List<RawLatLng> locations);
 
     void showProgress();
 
@@ -32,4 +29,8 @@ public interface IMadridMapView extends IBaseView {
     void collapsePollutantInfo();
 
     void populatePollutionDataDate(String date, String time);
+
+    void showUserLocation();
+
+    void requestLocationPermissionToUserIfNecessary();
 }
