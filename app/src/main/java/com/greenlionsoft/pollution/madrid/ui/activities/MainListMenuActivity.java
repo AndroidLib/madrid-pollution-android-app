@@ -18,7 +18,7 @@ import mainlistmenu.MainListMenuPresenter;
 
 public class MainListMenuActivity extends BaseActivity implements IMainListMenuView {
 
-    private static final int DELAY_FOR_REVEAL_ANIMATION_MS = 200;
+    private static final int DELAY_FOR_REVEAL_ANIMATION_MS = 100;
 
     @Bind(R.id.rv_list_menu)
     RecyclerView mListMenuRv;
