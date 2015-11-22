@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.greenlionsoft.pollution.madrid" >
 
+    <!-- needed to write and read PDF files in API<19 -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18"/>
@@ -9,8 +10,12 @@
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18"/>
 
+    <!-- Redundant Internet Permissions because they are provided when using Google Play Services 8.3+ -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Used to show user location in app, on API 23+ user will be requested for explicit permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <!-- OpenGL 2.0 is Required for Google Maps V2 -->
     <uses-feature
