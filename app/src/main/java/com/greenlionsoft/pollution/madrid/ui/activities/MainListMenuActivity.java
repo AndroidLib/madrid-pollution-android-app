@@ -75,6 +75,7 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.activity_stay);
             }
