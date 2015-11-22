@@ -4,6 +4,7 @@ import android.content.Context;
 
 import dependencies.IAppInjector;
 import repository.IPdfRepository;
+import repository.IPermissionsRepository;
 import repository.IPollutantsRepository;
 import repository.IStationsRepository;
 import repository.IUserPreferencesRepository;
@@ -59,6 +60,11 @@ public class AppInjector implements IAppInjector {
     @Override
     public IUserPreferencesRepository getUserPreferencesRepository() {
         return new UserPreferencesRepository();
+    }
+
+    @Override
+    public IPermissionsRepository getPermissionsRepository() {
+        return new PermissionsRepository();
     }
 
 

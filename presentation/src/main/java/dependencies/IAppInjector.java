@@ -1,6 +1,7 @@
 package dependencies;
 
 import repository.IPdfRepository;
+import repository.IPermissionsRepository;
 import repository.IPollutantsRepository;
 import repository.IStationsRepository;
 import repository.IUserPreferencesRepository;
@@ -14,4 +15,6 @@ public interface IAppInjector {
     IPollutantsRepository getPollutantsRepository();
 
     IUserPreferencesRepository getUserPreferencesRepository();
+
+    IPermissionsRepository getPermissionsRepository();
 }
