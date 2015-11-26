@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.facebook.appevents.AppEventsLogger;
 import com.greenlionsoft.pollution.madrid.R;
 import com.greenlionsoft.pollution.madrid.tools.AnalyticsUtil;
 import com.greenlionsoft.pollution.madrid.ui.listadapters.MainListMenuAdapter;
@@ -48,6 +49,18 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
 
 
         AnalyticsUtil.countVisit(this, AnalyticsUtil.MAIN_SCREEN);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
     }
 
     @Override

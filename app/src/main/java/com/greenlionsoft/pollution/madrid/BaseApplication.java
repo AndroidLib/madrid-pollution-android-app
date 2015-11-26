@@ -3,6 +3,7 @@ package com.greenlionsoft.pollution.madrid;
 import android.app.Application;
 
 import com.crashlytics.android.Crashlytics;
+import com.facebook.FacebookSdk;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.greenlionsoft.pollution.madrid.dependencies.AppInjector;
@@ -23,6 +24,9 @@ public class BaseApplication extends Application {
 
         //Fabric stuff
         Fabric.with(this, new Crashlytics());
+
+        //FB SDK
+        FacebookSdk.sdkInitialize(getApplicationContext());
 
         //Google Analytics
         analytics = GoogleAnalytics.getInstance(this);
