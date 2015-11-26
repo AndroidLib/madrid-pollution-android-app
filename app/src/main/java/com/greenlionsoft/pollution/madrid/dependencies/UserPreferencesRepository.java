@@ -3,7 +3,7 @@ package com.greenlionsoft.pollution.madrid.dependencies;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import repository.IUserPreferencesRepository;
+import datasources.userpreferences.IUserPreferencesRepository;
 
 public class UserPreferencesRepository implements IUserPreferencesRepository {
 

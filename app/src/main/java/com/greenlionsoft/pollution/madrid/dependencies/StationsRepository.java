@@ -8,11 +8,11 @@ import com.greenlionsoft.pollution.madrid.dependencies.retrofit.PollutionWebServ
 import java.util.ArrayList;
 import java.util.List;
 
+import datasources.stations.IStationsRepository;
+import datasources.stations.IStationsRepositoryDelegate;
 import entities.PollutionData;
 import entities.PollutionStation;
 import entities.RawLatLng;
-import repository.IStationsRepository;
-import repository.IStationsRepositoryDelegate;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;

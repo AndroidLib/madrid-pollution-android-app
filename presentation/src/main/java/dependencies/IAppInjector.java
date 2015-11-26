@@ -1,10 +1,10 @@
 package dependencies;
 
-import repository.IPdfRepository;
-import repository.IPermissionsRepository;
-import repository.IPollutantsRepository;
-import repository.IStationsRepository;
-import repository.IUserPreferencesRepository;
+import datasources.pdf.IPdfRepository;
+import datasources.pollutants.IPollutantsRepository;
+import datasources.stations.IStationsRepository;
+import datasources.userpreferences.IUserPreferencesRepository;
+import permissions.IPermissionsRepository;
 
 public interface IAppInjector {
 

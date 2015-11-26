@@ -1,4 +1,4 @@
-package repository;
+package datasources.stations;
 
 import java.util.List;
 

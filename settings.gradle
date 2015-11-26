@@ -1,5 +1,4 @@
-include ':app', ':domain', ':presentation', ':usecases', ':repository'
+include ':app', ':domain', ':presentation', ':usecases'
 project(':domain').projectDir = new File('domain')
 project(':presentation').projectDir = new File('presentation')
 project(':usecases').projectDir = new File('usecases')
-project(':repository').projectDir = new File('repository')

@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import repository.IPdfRepository;
+import datasources.pdf.IPdfRepository;
 
 public class PdfRepository implements IPdfRepository {
 

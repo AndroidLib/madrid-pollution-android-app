@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.v4.content.ContextCompat;
 
-import repository.IPermissionsRepository;
+import permissions.IPermissionsRepository;
 
 public class PermissionsRepository implements IPermissionsRepository {
 

@@ -1,4 +1,4 @@
-package repository;
+package datasources.pollutants;
 
 import java.util.Map;
 

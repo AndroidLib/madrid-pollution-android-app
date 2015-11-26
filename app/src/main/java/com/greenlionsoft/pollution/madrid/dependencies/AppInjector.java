@@ -2,12 +2,12 @@ package com.greenlionsoft.pollution.madrid.dependencies;
 
 import android.content.Context;
 
+import datasources.pdf.IPdfRepository;
+import datasources.pollutants.IPollutantsRepository;
+import datasources.stations.IStationsRepository;
+import datasources.userpreferences.IUserPreferencesRepository;
 import dependencies.IAppInjector;
-import repository.IPdfRepository;
-import repository.IPermissionsRepository;
-import repository.IPollutantsRepository;
-import repository.IStationsRepository;
-import repository.IUserPreferencesRepository;
+import permissions.IPermissionsRepository;
 
 public class AppInjector implements IAppInjector {
 

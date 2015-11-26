@@ -2,14 +2,14 @@ package madridmap;
 
 import java.util.List;
 
+import datasources.pollutants.IPollutantsRepository;
+import datasources.stations.IStationsRepository;
+import datasources.stations.IStationsRepositoryDelegate;
+import datasources.userpreferences.IUserPreferencesRepository;
 import entities.PollutantInfo;
 import entities.PollutionData;
 import entities.PollutionStation;
-import repository.IPermissionsRepository;
-import repository.IPollutantsRepository;
-import repository.IStationsRepository;
-import repository.IStationsRepositoryDelegate;
-import repository.IUserPreferencesRepository;
+import permissions.IPermissionsRepository;
 
 public class MadridMapUseCase implements IStationsRepositoryDelegate {
 

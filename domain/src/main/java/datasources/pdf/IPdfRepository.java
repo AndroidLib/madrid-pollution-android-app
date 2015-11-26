@@ -1,4 +1,4 @@
-package repository;
+package datasources.pdf;
 
 import java.io.File;
 

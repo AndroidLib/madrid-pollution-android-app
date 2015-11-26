@@ -7,8 +7,8 @@ import com.greenlionsoft.pollution.madrid.R;
 import java.util.HashMap;
 import java.util.Map;
 
+import datasources.pollutants.IPollutantsRepository;
 import entities.PollutantInfo;
-import repository.IPollutantsRepository;
 
 public class PollutantsRepository implements IPollutantsRepository {
 

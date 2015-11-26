@@ -1,4 +1,4 @@
-package repository;
+package datasources.userpreferences;
 
 public interface IUserPreferencesRepository {
 
