@@ -23,6 +23,10 @@ public class RegulationsUseCase {
         return mPdfRepository.isBoePdfAvailableInDevice();
     }
 
+    public boolean isNo2RegulationAvailable() {
+        return mPdfRepository.isNo2RegulationAvailableInDevice();
+    }
+
 
     public File getBoe() {
         return mPdfRepository.getBoeFile();
@@ -32,12 +36,20 @@ public class RegulationsUseCase {
         return mPdfRepository.getDirectiveFile();
     }
 
+    public File getNo2Regulation() {
+        return mPdfRepository.getNo2RegulationFile();
+    }
+
     public void downloadDirective() {
         mPdfRepository.copyDirectiveToDevice();
     }
 
     public void downloadBoe() {
         mPdfRepository.copyBoeToDevice();
+    }
+
+    public void downloadNo2Regulation() {
+        mPdfRepository.copyNo2RegulationToDevice();
     }
 
 

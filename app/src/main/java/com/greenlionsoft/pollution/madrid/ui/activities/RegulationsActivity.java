@@ -33,11 +33,17 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
     @Bind(R.id.tv_directive)
     TextView mDirectiveTv;
 
+    @Bind(R.id.tv_no2_regulation)
+    TextView mNo2RegulationTv;
+
     @Bind(R.id.ib_boe_download)
     ImageButton mBoeDownloadBt;
 
     @Bind(R.id.ib_directive_download)
     ImageButton mDirectiveDownloadBt;
+
+    @Bind(R.id.ib_no2_regulation_download)
+    ImageButton mNo2RegulationDownloadBt;
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
@@ -50,6 +56,9 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
 
     @Bind(R.id.rl_directive_area)
     RelativeLayout mDirectiveAreaRl;
+
+    @Bind(R.id.rl_no2_regulation_area)
+    RelativeLayout mNo2RegulationAreaRl;
 
     private RegulationsPresenter mPresenter;
 
@@ -70,6 +79,7 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
 
         View.OnClickListener directiveClickListener = new DirectiveClickListener();
         View.OnClickListener boeClickListener = new BoeClickListener();
+        View.OnClickListener no2RegulationClickListener = new No2RegulationClickListener();
 
         MaterialRippleLayout.on(mDirectiveAreaRl)
                 .rippleOverlay(true)
@@ -87,8 +97,17 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
                 .create()
                 .setOnClickListener(boeClickListener);
 
+        MaterialRippleLayout.on(mNo2RegulationAreaRl)
+                .rippleOverlay(true)
+                .rippleAlpha(0.2f)
+                .rippleColor(getResources().getColor(R.color.mp_grey_light))
+                .rippleHover(true)
+                .create()
+                .setOnClickListener(no2RegulationClickListener);
+
         mDirectiveDownloadBt.setOnClickListener(directiveClickListener);
         mBoeDownloadBt.setOnClickListener(boeClickListener);
+        mNo2RegulationDownloadBt.setOnClickListener(no2RegulationClickListener);
 
 
     }
@@ -107,6 +126,14 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
         @Override
         public void onClick(View v) {
             mPresenter.onBoePressed();
+        }
+    }
+
+    private class No2RegulationClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            mPresenter.onNo2RegulationPressed();
         }
     }
 
@@ -157,6 +184,18 @@ public class RegulationsActivity extends BaseActivity implements IRegulationsVie
     public void showDirectiveRead() {
         mDirectiveDownloadBt.setImageResource(R.drawable.ic_find_in_page);
         mDirectiveTv.setText(R.string.browse_directive);
+    }
+
+    @Override
+    public void showNo2RegulationDownload() {
+        mNo2RegulationDownloadBt.setImageResource(R.drawable.ic_file_download);
+        mNo2RegulationTv.setText(R.string.download_no2_regulation);
+    }
+
+    @Override
+    public void showNo2RegulationRead() {
+        mNo2RegulationDownloadBt.setImageResource(R.drawable.ic_find_in_page);
+        mNo2RegulationTv.setText(R.string.browse_no2_regulation);
     }
 
     @Override

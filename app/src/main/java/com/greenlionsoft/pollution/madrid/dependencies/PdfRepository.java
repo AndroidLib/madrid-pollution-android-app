@@ -15,6 +15,7 @@ public class PdfRepository implements IPdfRepository {
 
     private static final String DIRECTIVE_PDF = "DIRECTIVA_2008_50_CE.pdf";
     private static final String BOE_PDF = "BOE_A_2011_1645.pdf";
+    private static final String PROTOCOLO_VIGENTE_NO2 = "PROTOCOLO_VIGENTE_NO2.pdf";
 
     private Context mContext = AppInjector.getInstance().getApplicationContext();
 
@@ -33,6 +34,11 @@ public class PdfRepository implements IPdfRepository {
     }
 
     @Override
+    public boolean isNo2RegulationAvailableInDevice() {
+        return checkIfFileExistsInPublicFolder(PROTOCOLO_VIGENTE_NO2);
+    }
+
+    @Override
     public void copyBoeToDevice() {
         copyFileFromAssetsToPublicFolder(BOE_PDF);
     }
@@ -43,6 +49,11 @@ public class PdfRepository implements IPdfRepository {
     }
 
     @Override
+    public void copyNo2RegulationToDevice() {
+        copyFileFromAssetsToPublicFolder(PROTOCOLO_VIGENTE_NO2);
+    }
+
+    @Override
     public File getBoeFile() {
         return new File(mContext.getExternalFilesDir(null), BOE_PDF);
     }
@@ -50,6 +61,11 @@ public class PdfRepository implements IPdfRepository {
     @Override
     public File getDirectiveFile() {
         return new File(mContext.getExternalFilesDir(null), DIRECTIVE_PDF);
+    }
+
+    @Override
+    public File getNo2RegulationFile() {
+        return new File(mContext.getExternalFilesDir(null), PROTOCOLO_VIGENTE_NO2);
     }
 
 

@@ -14,6 +14,10 @@ public interface IRegulationsView extends IBaseView {
 
     void showDirectiveRead();
 
+    void showNo2RegulationDownload();
+
+    void showNo2RegulationRead();
+
     void showPdfFile(File pdfFile);
 
 }

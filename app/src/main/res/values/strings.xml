@@ -17,9 +17,11 @@
 
     <!-- Regulations Activity -->
     <string name="download_boe">Download Real Decreto 102/2011</string>
-    <string name="download_directive">Dowload Directive 2008/50/CE</string>
+    <string name="download_directive">Download Directive 2008/50/CE</string>
+    <string name="download_no2_regulation">Download NO2 Protocol</string>
     <string name="browse_boe">Browse Royal Decret 102/2011</string>
     <string name="browse_directive">Browse Directive 2008/50/CE</string>
+    <string name="browse_no2_regulation">Browse NO2 Regulation</string>
 
     <string name="regulations_text">The thresholds that are considered a limit in this application correspond to those defined in the European Directive 2008/50/EC and its corresponding implementation in Royal Decree 102/2011. As a quick summary and guidance. They are reflected in the following table but for a thorough and rigorous inquiry you can download and view the texts of both standards in PDF.</string>
 
@@ -58,5 +60,10 @@
     <string name="ug" translatable="false">(µg)</string>
     <string name="mg" translatable="false">(mg)</string>
     <string name="PM10PM25" translatable="false">PM10 y PM2,5</string>
+    <string name="toast_newer_gpservices_version_needed">Sorry but a newer version of Google Play is needed</string>
+    <string name="dialog_not_compatible_title">Compatibility problem</string>
+    <string name="dialog_not_compatible_content">Sorry, this device is not compatible, probably you don\'t have Google Play Services installed.</string>
+    <string name="dialog_ok">OK</string>
+
 
 </resources>

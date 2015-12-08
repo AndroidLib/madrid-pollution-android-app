@@ -9,12 +9,17 @@ public interface IPdfRepository {
 
     boolean isBoePdfAvailableInDevice();
 
+    boolean isNo2RegulationAvailableInDevice();
+
     void copyBoeToDevice();
 
     void copyDirectiveToDevice();
+
+    void copyNo2RegulationToDevice();
 
     File getBoeFile();
 
     File getDirectiveFile();
 
+    File getNo2RegulationFile();
 }

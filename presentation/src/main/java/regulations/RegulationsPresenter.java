@@ -24,6 +24,11 @@ public class RegulationsPresenter {
             mView.showBoeDownload();
         }
 
+        if (mRegulationsUseCase.isNo2RegulationAvailable()) {
+            mView.showNo2RegulationRead();
+        } else {
+            mView.showNo2RegulationDownload();
+        }
     }
 
 
@@ -48,4 +53,13 @@ public class RegulationsPresenter {
         }
     }
 
+    public void onNo2RegulationPressed() {
+
+        if (mRegulationsUseCase.isNo2RegulationAvailable()) {
+            mView.showPdfFile(mRegulationsUseCase.getNo2Regulation());
+        } else {
+            mRegulationsUseCase.downloadNo2Regulation();
+            mView.showNo2RegulationRead();
+        }
+    }
 }
