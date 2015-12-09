@@ -1,5 +1,7 @@
 package dependencies;
 
+import cloudmessaging.ICloudMessaging;
+import compatibility.ICompatibility;
 import datasources.pdf.IPdfRepository;
 import datasources.pollutants.IPollutantsRepository;
 import datasources.stations.IStationsRepository;
@@ -17,4 +19,8 @@ public interface IAppInjector {
     IUserPreferencesRepository getUserPreferencesRepository();
 
     IPermissionsRepository getPermissionsRepository();
+
+    ICloudMessaging getCloudMessaging();
+
+    ICompatibility getCompatibility();
 }

@@ -6,20 +6,27 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.facebook.appevents.AppEventsLogger;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.greenlionsoft.pollution.madrid.R;
+import com.greenlionsoft.pollution.madrid.dependencies.AppInjector;
 import com.greenlionsoft.pollution.madrid.tools.AnalyticsUtil;
 import com.greenlionsoft.pollution.madrid.ui.listadapters.MainListMenuAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import dependencies.IAppInjector;
 import mainlistmenu.IMainListMenuView;
 import mainlistmenu.MainListMenuPresenter;
 
 public class MainListMenuActivity extends BaseActivity implements IMainListMenuView {
 
     private static final int DELAY_FOR_REVEAL_ANIMATION_MS = 100;
+    private static final int REQUEST_CODE_RECOVER_PLAY_SERVICES = 2015;
 
     @Bind(R.id.rv_list_menu)
     RecyclerView mListMenuRv;
@@ -39,16 +46,15 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
 
         setSupportActionBar(mToolbar);
 
-        mPresenter = new MainListMenuPresenter(this);
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mListMenuRv.setLayoutManager(linearLayoutManager);
 
         MainListMenuAdapter adapter = new MainListMenuAdapter(mPresenter, this);
         mListMenuRv.setAdapter(adapter);
 
-
         AnalyticsUtil.countVisit(this, AnalyticsUtil.MAIN_SCREEN);
+
+        mPresenter = new MainListMenuPresenter(this);
     }
 
     @Override
@@ -81,6 +87,40 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
         startActivityWithTransition(intent);
     }
 
+    @Override
+    public void notifyDeviceCompatible() {
+        //Not used
+    }
+
+    @Override
+    public void notifyUserFix() {
+
+        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+
+        if (GooglePlayServicesUtil.isUserRecoverableError(status)) {
+            GooglePlayServicesUtil.getErrorDialog(status, this,
+                    REQUEST_CODE_RECOVER_PLAY_SERVICES).show();
+        }
+
+    }
+
+    @Override
+    public void notifyDeviceNotCompatible() {
+        new MaterialDialog.Builder(this)
+                .title(R.string.dialog_not_compatible_title)
+                .content(R.string.dialog_not_compatible_content)
+                .positiveText(R.string.dialog_ok)
+                .iconRes(R.drawable.ic_error)
+                .cancelable(false)
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(MaterialDialog materialDialog, DialogAction dialogAction) {
+                        finish();
+                    }
+                })
+                .show();
+    }
+
     private void startActivityWithTransition(final Intent intent) {
 
         Handler handler = new Handler();
@@ -93,5 +133,25 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
                 overridePendingTransition(R.anim.slide_in_right, R.anim.activity_stay);
             }
         }, DELAY_FOR_REVEAL_ANIMATION_MS);
+    }
+
+    @Override
+    public IAppInjector getAppInjector() {
+        return AppInjector.getInstance();
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case REQUEST_CODE_RECOVER_PLAY_SERVICES:
+                if (resultCode == RESULT_CANCELED) {
+                    Toast.makeText(this, R.string.toast_newer_gpservices_version_needed,
+                            Toast.LENGTH_LONG).show();
+                    finish();
+                }
+                return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

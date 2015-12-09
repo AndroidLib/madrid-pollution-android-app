@@ -2,6 +2,11 @@ package com.greenlionsoft.pollution.madrid.dependencies;
 
 import android.content.Context;
 
+import com.greenlionsoft.pollution.madrid.dependencies.compatibility.Compatibility;
+import com.greenlionsoft.pollution.madrid.dependencies.gcm.CloudMessaging;
+
+import cloudmessaging.ICloudMessaging;
+import compatibility.ICompatibility;
 import datasources.pdf.IPdfRepository;
 import datasources.pollutants.IPollutantsRepository;
 import datasources.stations.IStationsRepository;
@@ -65,6 +70,16 @@ public class AppInjector implements IAppInjector {
     @Override
     public IPermissionsRepository getPermissionsRepository() {
         return new PermissionsRepository();
+    }
+
+    @Override
+    public ICloudMessaging getCloudMessaging() {
+        return new CloudMessaging();
+    }
+
+    @Override
+    public ICompatibility getCompatibility() {
+        return new Compatibility();
     }
 
 
