@@ -11,5 +11,8 @@ public interface IUserPreferencesRepository {
 
     void saveSelectedMadridCityNameStation(String stationName);
 
+    void saveGcmToken(String token);
+
+    String getGcmToken();
 
 }

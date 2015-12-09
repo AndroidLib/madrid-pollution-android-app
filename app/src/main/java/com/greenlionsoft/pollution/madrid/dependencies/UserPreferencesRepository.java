@@ -10,6 +10,7 @@ public class UserPreferencesRepository implements IUserPreferencesRepository {
 
     private static final String MADRID_CITY_POLLUTION_DATE = "MADRID_CITY_POLLUTION_DATE";
     private static final String MADRID_CITY_NAME_OF_SELECTED_STATION = "MADRID_CITY_NAME_OF_SELECTED_STATION";
+    private static final String GCM_TOKEN = "GCM_TOKEN";
 
 
     private Context mContext;
@@ -41,5 +42,15 @@ public class UserPreferencesRepository implements IUserPreferencesRepository {
     @Override
     public void saveSelectedMadridCityNameStation(String stationName) {
         mSharedPreferences.edit().putString(MADRID_CITY_NAME_OF_SELECTED_STATION, stationName).apply();
+    }
+
+    @Override
+    public void saveGcmToken(String token) {
+        mSharedPreferences.edit().putString(GCM_TOKEN, token).apply();
+    }
+
+    @Override
+    public String getGcmToken() {
+        return mSharedPreferences.getString(GCM_TOKEN, "");
     }
 }
