@@ -10,9 +10,13 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
+//Google Cloud Messages
+apply plugin: 'com.google.gms.google-services'
+
 repositories {
     maven { url 'https://maven.fabric.io/public' }
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 //https://www.thoughtworks.com/insights/blog/signing-open-source-android-apps-without-disclosing-passwords
@@ -101,6 +105,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //Unit Tests
     testCompile 'junit:junit:4.12'
+
     //Android
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
@@ -110,6 +115,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:8.3.0'
     compile 'com.google.android.gms:play-services-analytics:8.3.0'
     compile 'com.google.android.gms:play-services-ads:8.3.0'
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
     //ButterKnife
     compile 'com.jakewharton:butterknife:7.0.1'
     //Retrofit
@@ -123,12 +129,16 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     //FB SDK
     compile 'com.facebook.android:facebook-android-sdk:4.8.2'
+    //Backwards compatible Material Dialogs
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.2@aar') {
+        transitive = true
+    }
+    //Crashlytics
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.4@aar') {
+        transitive = true;
+    }
 
     //Modules dependencies
     compile project(':presentation')
     compile project(':domain')
-    //Crashlytics
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.3@aar') {
-        transitive = true;
-    }
 }
