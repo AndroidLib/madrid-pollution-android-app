@@ -22,9 +22,9 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
 
     <permission
-        android:name="com.greenlionsoft.pollution.madrid.permission.C2D_MESSAGE"
+        android:name="${gcmPermissionPackage}.permission.C2D_MESSAGE"
         android:protectionLevel="signature"/>
-    <uses-permission android:name="com.greenlionsoft.pollution.madrid.permission.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="${gcmPermissionPackage}.permission.C2D_MESSAGE"/>
 
 
     <!-- OpenGL 2.0 is Required for Google Maps V2 -->
@@ -53,7 +53,8 @@
 
         <activity
             android:name=".ui.activities.MainListMenuActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -66,6 +67,10 @@
         <activity android:name=".ui.activities.RegulationsActivity"/>
 
         <activity android:name=".ui.activities.PollutantsActivity"/>
+
+        <activity
+            android:name=".ui.activities.PollutionAlertActivity"
+            android:launchMode="singleTop"/>
 
         <!-- Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
            installation campaign reporting -->
