@@ -104,6 +104,13 @@ public class PollutionAlertActivity extends BaseActivity implements IPollutionAl
     }
 
     @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainListMenuActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
 
