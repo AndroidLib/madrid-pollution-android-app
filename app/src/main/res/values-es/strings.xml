@@ -42,8 +42,8 @@
     <string name="pollutants_description">DESCRIPCIÓN</string>
 
     <!-- Pollution Alerts Activity -->
-    <string name="pollution_alerts_enabled">Notificaciones de Alertas por Polución Activadas</string>
-    <string name="pollution_alerts_disabled">Notificaciones de Alertas por Polución Desactivadas</string>
+    <string name="pollution_alerts_enabled">Notif. de Alertas por Polución Activadas</string>
+    <string name="pollution_alerts_disabled">Notif. de Alertas por Polución Desactivadas</string>
 
     <string name="speed_limitation">Limitación de velocidad a 70 km/h en la M-30 y en los tramos de las carreteras de acceso a Madrid, comprendidas en el interior de la M-40.</string>
     <string name="parking_limitation">Prohibición del estacionamiento de vehículos en las plazas y horario del SER en el interior de la M-30.</string>
