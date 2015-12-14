@@ -3,6 +3,8 @@ package pollutionalert;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 
+import entities.TimePatterns;
+
 public class PollutionAlertPresenter {
 
     private IPollutionAlertView mView;
@@ -44,7 +46,7 @@ public class PollutionAlertPresenter {
         String dateString = mPollutionAlertUseCase.getPollutionAlertDate();
 
         DateTime today = new DateTime();
-        DateTime alertDate = DateTimeFormat.forPattern("yyyyMMdd_HHmm").parseDateTime(dateString);
+        DateTime alertDate = DateTimeFormat.forPattern(TimePatterns.ALERT_PATTERN).parseDateTime(dateString);
 
         if (scenarioLevel == 0 || isAlertExpired(today, alertDate)) {
             mView.showNoScenarioTitle();

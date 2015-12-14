@@ -13,24 +13,24 @@ public class JodaUtil {
     }
 
 
-    public static DateTime JodaStringToDateTime(String stringDate) {
+    public static DateTime JodaStringToDateTime(String stringDate, String pattern) {
 
-        DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter fmt = DateTimeFormat.forPattern(pattern);
         DateTime dateTime = fmt.parseDateTime(stringDate);
 
         return dateTime;
     }
 
-    public static String JodaDateTimeToString(DateTime dateTime) {
-        DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss");
+    public static String JodaDateTimeToString(DateTime dateTime, String pattern) {
+        DateTimeFormatter fmt = DateTimeFormat.forPattern(pattern);
         String dateString = fmt.print(dateTime);
 
         return dateString;
     }
 
-    public static String getNowString() {
+    public static String getNowString(String pattern) {
 
-        return JodaDateTimeToString(new DateTime());
+        return JodaDateTimeToString(new DateTime(), pattern);
 
     }
 }

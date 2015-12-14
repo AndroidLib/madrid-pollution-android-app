@@ -20,6 +20,7 @@ import org.joda.time.DateTime;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import dependencies.IAppInjector;
+import entities.TimePatterns;
 import pollutionalert.IPollutionAlertView;
 import pollutionalert.PollutionAlertPresenter;
 
@@ -148,8 +149,8 @@ public class PollutionAlertActivity extends BaseActivity implements IPollutionAl
     @Override
     public void showScenarioTitle(int scenarioLevel, String yyyyMMdd_HHmm) {
 
-        DateTime alertTime = JodaUtil.JodaStringToDateTime(yyyyMMdd_HHmm, JodaUtil.ALERT_PATTERN);
-        String displayTime = JodaUtil.JodaDateTimeToString(alertTime, JodaUtil.DISPLAY_PATTERN);
+        DateTime alertTime = JodaUtil.JodaStringToDateTime(yyyyMMdd_HHmm, TimePatterns.ALERT_PATTERN);
+        String displayTime = JodaUtil.JodaDateTimeToString(alertTime, TimePatterns.DISPLAY_PATTERN);
 
         mScenarioTitleTv.setText(String.format(getResources().getString(R.string.activated_scenario_protocol), scenarioLevel, displayTime));
     }
