@@ -55,12 +55,16 @@ android {
 
     buildTypes {
 
+        //Two apps in a device can't define a custom permission with same name, so we use a manifest
+        //place holder to be able to have Debug and Release apps installed in same device
+
         debug {
             resValue "string", "google_maps_v2_api_key", appSecrets.googleMapV2DebugKey
             resValue "string", "analytics_tracking_id", appSecrets.analyticsTrackingId
             resValue "string", "admob_id", appSecrets.admobId
             resValue "string", "pollution_end_point", appSecrets.pollutionEndPoint
             resValue "string", "facebook_app_id", appSecrets.facebookAppId
+            manifestPlaceholders = [gcmPermissionPackage: "com.greenlionsoft.pollution.madrid.debug"];
             minifyEnabled false
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-DEBUG"
@@ -72,6 +76,7 @@ android {
             resValue "string", "admob_id", appSecrets.admobId
             resValue "string", "pollution_end_point", appSecrets.pollutionEndPoint
             resValue "string", "facebook_app_id", appSecrets.facebookAppId
+            manifestPlaceholders = [gcmPermissionPackage: "com.greenlionsoft.pollution.madrid"];
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
@@ -94,9 +99,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
-    //ButterKnife Required
+
     lintOptions {
+        //ButterKnife Required
         disable 'InvalidPackage'
+        //Fixes bug in Release Mode requiring Google Play Services string translations
+        disable 'MissingTranslation'
     }
 }
 
@@ -111,6 +119,7 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
     //Services
     compile 'com.google.android.gms:play-services-maps:8.3.0'
     compile 'com.google.android.gms:play-services-analytics:8.3.0'
