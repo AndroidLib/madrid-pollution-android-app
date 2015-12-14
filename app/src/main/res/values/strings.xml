@@ -8,6 +8,7 @@
     <string name="title_menu_madrid_region">MADRID REGION</string>
     <string name="title_menu_pollutants">POLLUTANTS</string>
     <string name="title_menu_regulations">REGULATIONS</string>
+    <string name="title_pollution_alert">POLLUTION ALERTS</string>
 
     <!-- Madrid Map Activity -->
     <string name="error_network_message">No Internet Connection Available</string>
@@ -40,6 +41,35 @@
     <string name="pollutants_description">DESCRIPTIONS</string>
     <string name="pollutants_effects">EFFECTS</string>
 
+    <!-- Pollution Alerts Activity -->
+    <string name="pollution_alerts_enabled">Notifications for Pollution Alerts Enabled</string>
+    <string name="pollution_alerts_disabled">Notifications for Pollution Alerts Disabled</string>
+
+    <string name="speed_limitation">Speed limit of 70 km/h in the M-30 and on the access roads to Madrid, covered inside the M-40.</string>
+    <string name="parking_limitation">Vehicle parking ban in SER places in the interior of M-30.</string>
+    <string name="circulation_limitation">Restriction of circulation within the central zone (inner area of the M-30) of 50% of all vehicles (even days may move vehicles with number plates end in even numbers and odd days those vehicles whose number plates ends in odd number).</string>
+    <string name="taxi_restriction">Restriction of free movement of taxis, except ecotaxis and Eurotaxis, inside the central zone (inner area of the M-30).</string>
+    <string name="circulation_restriction">Restriction of circulation within the central zone including M-30 of 50% of all vehicles (even days may move vehicles with number plates end in even numbers and odd days those vehicles whose number plates ends in odd number).</string>
+    <string name="activated_scenario_protocol">Activaded scenario %1$s of high level pollution protocol for the day  %2$s:</string>
+    <string name="take_in_account_title">Take in account that:</string>
+    <string name="pollution_alert_disclaimer">The warnings issued by the city of Madrid may take several hours to be reflected in the app, you can consult the official communications on the web <a href="http://www.mambiente.munimadrid.es">www.mambiente.munimadrid.es</a></string>
+    <string name="pollution_alert_protocol_details">You can review the full document that describes the actuation Protocol in case of High Pollution episodes in the Regulations section of this app.</string>
+
+    <!-- GCM -->
+    <string name="traffic_restriction_alert">Alerta de Restricciones de Tráfico</string>
+    <string name="scenario_type_0">No Alerts or Traffic Restrictions at this time due to Pollution</string>
+    <string name="scenario_type_1">Level 1: Speed limitation to 70km/h on M-30 and access</string>
+    <string name="scenario_type_2">Level 2: Speed limitation to 70km/h on M-30 and access + Parking Ban in SER zone</string>
+    <string name="scenario_type_3">Level 3: Speed limitation to 70km/h on M-30 and access + 50% circulation in the interior of M-30 + Parking Ban in SER zone</string>
+    <string name="scenario_type_4">Level 4: Speed limitation to 70km/h on M-30 and access + 50% circulation in the interior and M-30 + Parking Ban in SER zone</string>
+    <string name="notification_show_details">Show details</string>
+
+    <!-- Google Play Services not available -->
+    <string name="toast_newer_gpservices_version_needed">Sorry but a newer version of Google Play is needed</string>
+    <string name="dialog_not_compatible_title">Compatibility problem</string>
+    <string name="dialog_not_compatible_content">Sorry, this device is not compatible, probably you don\'t have Google Play Services installed.</string>
+    <string name="dialog_ok">OK</string>
+
     <!-- Future reference -->
     <string name="wikipedia">Texts from Wikipedia under Creative Commons License CC-BY-SA</string>
 
@@ -60,10 +90,6 @@
     <string name="ug" translatable="false">(µg)</string>
     <string name="mg" translatable="false">(mg)</string>
     <string name="PM10PM25" translatable="false">PM10 y PM2,5</string>
-    <string name="toast_newer_gpservices_version_needed">Sorry but a newer version of Google Play is needed</string>
-    <string name="dialog_not_compatible_title">Compatibility problem</string>
-    <string name="dialog_not_compatible_content">Sorry, this device is not compatible, probably you don\'t have Google Play Services installed.</string>
-    <string name="dialog_ok">OK</string>
 
 
 </resources>

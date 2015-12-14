@@ -8,6 +8,7 @@
     <string name="title_menu_madrid_region">MAPA DE LA COMUNIDAD</string>
     <string name="title_menu_pollutants">CONTAMINANTES</string>
     <string name="title_menu_regulations">NORMATIVA</string>
+    <string name="title_pollution_alert">ALERTAS DE POLUCION</string>
 
     <!-- Madrid Map Activity -->
     <string name="error_network_message">No hay conexión a Internet disponible</string>
@@ -40,9 +41,37 @@
     <string name="pollutants_effects">EFECTOS</string>
     <string name="pollutants_description">DESCRIPCIÓN</string>
 
+    <!-- Pollution Alerts Activity -->
+    <string name="pollution_alerts_enabled">Notificaciones de Alertas por Polución Activadas</string>
+    <string name="pollution_alerts_disabled">Notificaciones de Alertas por Polución Desactivadas</string>
+
+    <string name="speed_limitation">Limitación de velocidad a 70 km/h en la M-30 y en los tramos de las carreteras de acceso a Madrid, comprendidas en el interior de la M-40.</string>
+    <string name="parking_limitation">Prohibición del estacionamiento de vehículos en las plazas y horario del SER en el interior de la M-30.</string>
+    <string name="circulation_limitation">Restricción de la circulación en el interior de la almendra central (área interior de la M-30) del 50% de todos los vehículos. (podrán circular en días pares los vehículos cuya matrícula acabe en número par y en días impares aquellos vehículos cuya matrícula acabe en número impar).</string>
+    <string name="taxi_restriction">Restricción de la circulación de taxis libres, excepto Ecotaxis y Eurotaxis, en el interior de la almendra central (área interior de la M-30).</string>
+    <string name="circulation_restriction">Restricción de la circulación en la almendra central así como de la circulación por la M-30 del 50% de todos los vehículos. (podrán circular en días pares los vehículos cuya matrícula acabe en número par y en días impares aquellos vehículos cuya matrícula acabe en número impar).</string>
+    <string name="activated_scenario_protocol">Activado el Escenario %1$s del protocolo de medidas por alta contaminación para el día %2$s:</string>
+    <string name="take_in_account_title">Ten en cuenta que:</string>
+    <string name="pollution_alert_disclaimer">Las alertas emitidas por el Ayuntamiento de Madrid pueden tardar en reflejarse varias horas en la app, puedes consultar las comunicaciones oficiales en la web <a href="http://www.mambiente.munimadrid.es">www.mambiente.munimadrid.es</a></string>
+    <string name="pollution_alert_protocol_details">Puedes consultar el documento completo que describe el Protocolo de actuación en caso de episodios de alta contaminación en la sección Normativa de ésta aplicación.</string>
+
+    <!-- GCM -->
+    <string name="traffic_restriction_alert">Alerta de Restricciones de Tráfico</string>
+    <string name="scenario_type_0">No existen en este momento alertas o restricciones de tráfico debido a la contaminación</string>
+    <string name="scenario_type_1">Nivel 1: Restricciones de Velocidad a 70 km/h en M-30 y accesos</string>
+    <string name="scenario_type_2">Nivel 2: Restricciones de Velocidad a 70 km/h en M-30 y accesos + Aparcamiento en zona SER</string>
+    <string name="scenario_type_3">Nivel 3: Restricciones de Velocidad a 70 km/h en M-30 y accesos + 50% Circulación en interior de la M-30 + Aparcamiento en Zona SER</string>
+    <string name="scenario_type_4">Nivel 4: Restricciones de Velocidad a 70 km/h en M-30 y accesos + 50% Circulación en interior y M-30 + Aparcamiento en Zona SER</string>
+    <string name="notification_show_details">Ver detalles</string>
+
+    <!-- Google Play Services not available -->
+    <string name="toast_newer_gpservices_version_needed">Sorry but a newer version of Google Play is needed</string>
+    <string name="dialog_not_compatible_title">Problema de Compatibilidad</string>
+    <string name="dialog_not_compatible_content">Lo sentimos pero este dispositivo no es compatible, probablemente no tiene Google Play Services instalado o actualizado.</string>
+    <string name="dialog_ok">OK</string>
+
     <!-- Future reference -->
     <string name="wikipedia">Textos extraidos de Wikipedia bajo licencia Creative Commons CC-BY-SA</string>
-    <string name="toast_newer_gpservices_version_needed">Sorry but a newer version of Google Play is needed</string>
 
 
 </resources>
