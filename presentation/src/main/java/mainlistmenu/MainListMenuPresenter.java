@@ -36,6 +36,10 @@ public class MainListMenuPresenter {
         mView.proceedToPollutantsView();
     }
 
+    public void onPollutionAlertPressed() {
+        mView.proceedPollutionAlertView();
+    }
+
 
     private void checkDeviceCompatibility() {
 

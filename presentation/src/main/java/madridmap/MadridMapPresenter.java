@@ -77,6 +77,10 @@ public class MadridMapPresenter implements IMadridMapUseCaseDelegate {
         mMadridMapUseCase.saveSelectedStationName(name);
     }
 
+    public void onPollutionAlertPressed() {
+        mView.proceedPollutionAlertView();
+    }
+
     public void onUserLocationPermissionGranted() {
         mView.showUserLocation();
     }

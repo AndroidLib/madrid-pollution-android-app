@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -49,12 +52,32 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         mListMenuRv.setLayoutManager(linearLayoutManager);
 
+        mPresenter = new MainListMenuPresenter(this);
+
         MainListMenuAdapter adapter = new MainListMenuAdapter(mPresenter, this);
         mListMenuRv.setAdapter(adapter);
 
         AnalyticsUtil.countVisit(this, AnalyticsUtil.MAIN_SCREEN);
+    }
 
-        mPresenter = new MainListMenuPresenter(this);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main_list_menu_activity, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_pollution_alert:
+                mPresenter.onPollutionAlertPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
@@ -88,6 +111,12 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
     }
 
     @Override
+    public void proceedPollutionAlertView() {
+        Intent intent = new Intent(this, PollutionAlertActivity.class);
+        startActivityWithTransition(intent);
+    }
+
+    @Override
     public void notifyDeviceCompatible() {
         //Not used
     }
@@ -110,7 +139,7 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
                 .title(R.string.dialog_not_compatible_title)
                 .content(R.string.dialog_not_compatible_content)
                 .positiveText(R.string.dialog_ok)
-                .iconRes(R.drawable.ic_error)
+                .iconRes(R.drawable.ic_warning_black_24dp)
                 .cancelable(false)
                 .onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
@@ -128,7 +157,6 @@ public class MainListMenuActivity extends BaseActivity implements IMainListMenuV
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.activity_stay);
             }

@@ -10,6 +10,8 @@ public interface IMainListMenuView extends IBaseView {
 
     void proceedToPollutantsView();
 
+    void proceedPollutionAlertView();
+
     void notifyDeviceCompatible();
 
     void notifyUserFix();

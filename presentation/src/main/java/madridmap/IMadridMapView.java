@@ -33,4 +33,6 @@ public interface IMadridMapView extends IBaseView {
     void showUserLocation();
 
     void requestLocationPermissionToUserIfNecessary();
+
+    void proceedPollutionAlertView();
 }
