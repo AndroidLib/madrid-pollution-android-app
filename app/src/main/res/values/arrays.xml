@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="pollutants_names">
+    <string-array name="pollutants_names" translatable="false">
         <item>SO2</item>
         <item>CO</item>
         <item>NO</item>
@@ -39,7 +39,7 @@
         <item>Its vapors can cause headache, nausea and malaise. As the benzene it is also a narcotic agent. Prolonged exposures to this product may cause changes in the central nervous system</item>
     </string-array>
 
-    <string-array name="array_zone_1">
+    <string-array name="array_zone_1" translatable="false">
         <item>Plaza de España</item>
         <item>Escuela Aguirre</item>
         <item>Avenida Ramón y Cajal</item>
@@ -67,7 +67,7 @@
         <item>Media Red</item>
     </string-array>
 
-    <string-array name="array_zone_1_json_names">
+    <string-array name="array_zone_1_json_names" translatable="false">
         <item>PLAZA ESPAÑA</item>
         <item>ESCUELAS AGUIRRE</item>
         <item>AVDA. RAMON Y CAJAL</item>
@@ -95,7 +95,7 @@
         <item>MEDIA RED</item>
     </string-array>
 
-    <string-array name="array_LatLng_zone_1">
+    <string-array name="array_LatLng_zone_1" translatable="false">
         <item>40.42361111,-3.712222222</item>
         <item>40.42138889,-3.682222222</item>
         <item>40.45138889,-3.677222222</item>
