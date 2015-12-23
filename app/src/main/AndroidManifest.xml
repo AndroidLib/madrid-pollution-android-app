@@ -17,6 +17,9 @@
     <!-- Used to show user location in app, on API 23+ user will be requested for explicit permission -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
+    <!-- Vibration permission -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <!-- Google GCM -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
